@@ -38,7 +38,6 @@
                 @enderror
             </div>
 
-            <!-- Dropdown Dosen Wali -->
             <div class="mb-4">
                 <label for="dosen_id" class="block text-sm font-medium text-gray-700">Dosen Wali</label>
                 <select name="dosen_id" id="dosen_id" class="mt-1 p-2 w-full border border-gray-300 rounded-lg">
@@ -54,7 +53,6 @@
                 @enderror
             </div>
 
-            <!-- Dropdown Mata Kuliah -->
             <div class="mb-4">
                 <label for="mata_kuliah_id" class="block text-sm font-medium text-gray-700">Mata Kuliah</label>
                 <select name="mata_kuliah_id" id="mata_kuliah_id" class="mt-1 p-2 w-full border border-gray-300 rounded-lg">

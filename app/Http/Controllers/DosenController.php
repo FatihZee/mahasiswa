@@ -15,7 +15,6 @@ class DosenController extends Controller
 
 public function show(Dosen $dosen)
 {
-    // Mengambil data dosen yang sesuai
     return view('dosen.show', compact('dosen'));
 }
 
@@ -26,7 +25,6 @@ public function create()
 
 public function store(Request $request)
 {
-    // Validasi form
     $request->validate([
         'kode_dosen' => 'required|max:3',
         'nama_dosen' => 'required',
@@ -35,7 +33,7 @@ public function store(Request $request)
         'no_telepon' => 'nullable',
     ]);
 
-    Dosen::create($request->all()); // menyimpan data dosen
+    Dosen::create($request->all());
 
     return redirect()->route('dosen.index');
 }

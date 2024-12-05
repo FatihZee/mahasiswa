@@ -12,6 +12,7 @@
                     <th class="px-4 py-2 border-b">NIM</th>
                     <th class="px-4 py-2 border-b">Nama Mahasiswa</th>
                     <th class="px-4 py-2 border-b">Dosen Wali</th>
+                    <th class="px-4 py-2 border-b">Mata Kuliah</th>
                     <th class="px-4 py-2 border-b">Aksi</th>
                 </tr>
             </thead>
@@ -20,16 +21,13 @@
                     <tr>
                         <td class="px-4 py-2 border-b">{{ $mahasiswa->nim }}</td>
                         <td class="px-4 py-2 border-b">{{ $mahasiswa->nama_mahasiswa }}</td>
-                        <td class="px-4 py-2 border-b">{{ $mahasiswa->dosen->nama_dosen ?? 'Tidak ada dosen' }}
-                        </td>
+                        <td class="px-4 py-2 border-b">{{ $mahasiswa->dosen->nama_dosen ?? 'Tidak ada dosen' }}</td>
+                        <td class="px-4 py-2 border-b">{{ $mahasiswa->mataKuliah->nama_mk ?? 'Tidak ada mata kuliah' }}</td>
                         <td class="px-4 py-2 border-b">
-                            <!-- Link to View Detail -->
                             <a href="{{ route('mahasiswa.show', $mahasiswa) }}" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Detail</a>
 
-                            <!-- Edit Button -->
                             <a href="{{ route('mahasiswa.edit', $mahasiswa) }}" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Edit</a>
 
-                            <!-- Delete Form -->
                             <form action="{{ route('mahasiswa.destroy', $mahasiswa) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')

@@ -13,9 +13,9 @@
             <tr>
                 <th class="py-2 px-4 text-left">Kode Dosen</th>
                 <th class="py-2 px-4 text-left">Nama Dosen</th>
-                <th class="py-2 px-4 text-left">NIP</th> <!-- Kolom NIP -->
+                <th class="py-2 px-4 text-left">NIP</th>
                 <th class="py-2 px-4 text-left">Email</th>
-                <th class="py-2 px-4 text-left">No Telepon</th> <!-- Kolom No Telepon -->
+                <th class="py-2 px-4 text-left">No Telepon</th>
                 <th class="py-2 px-4 text-left">Aksi</th>
             </tr>
         </thead>
@@ -24,11 +24,10 @@
                 <tr class="hover:bg-gray-100">
                     <td class="py-2 px-4">{{ $dosen->kode_dosen }}</td>
                     <td class="py-2 px-4">{{ $dosen->nama_dosen }}</td>
-                    <td class="py-2 px-4">{{ $dosen->nip }}</td> <!-- Menampilkan NIP -->
+                    <td class="py-2 px-4">{{ $dosen->nip }}</td>
                     <td class="py-2 px-4">{{ $dosen->email }}</td>
-                    <td class="py-2 px-4">{{ $dosen->no_telepon }}</td> <!-- Menampilkan No Telepon -->
+                    <td class="py-2 px-4">{{ $dosen->no_telepon }}</td>
                     <td class="py-2 px-4">
-                        <!-- Link ke halaman detail dosen -->
                         <a href="{{ route('dosen.show', $dosen) }}" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Detail</a>
 
                         <a href="{{ route('dosen.edit', $dosen) }}" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Edit</a>
